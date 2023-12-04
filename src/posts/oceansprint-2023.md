@@ -54,6 +54,8 @@ During the sprint, I extended the module to support running `x86_64-linux` VMs o
 
 The main caveat is that the VMs are currently running through QEMU which does not support Rosetta at the moment, making them super slow.
 
+## Conclusion
+
 I highly recommend anyone in the NixOS community who is thinking about going to apply for future sprints.
 
 Thank you so much to Domen, Nejc, Florian, and all the sponsors for allowing Ocean Sprint to exist.
