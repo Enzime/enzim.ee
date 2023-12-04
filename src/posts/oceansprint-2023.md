@@ -1,7 +1,7 @@
 ---
 title: NixOS Ocean Sprint 2023
 date: '2023-12-04'
-permalink: '/posts/oceansprint-2023/index.html'
+permalink: '/blog/oceansprint-2023/'
 tags: [nix, ocean sprint]
 ---
 
