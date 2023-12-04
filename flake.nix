@@ -12,7 +12,7 @@
       };
     in {
       devShells.default = pkgs.mkShell {
-        packages = [ (pkgs.yarn.override { nodejs = pkgs.nodejs-16_x; }) pkgs.bashInteractive ];
+        packages = [ (pkgs.yarn.override { nodejs = pkgs.nodejs-16_x; }) pkgs.rsync pkgs.bashInteractive ];
       };
     });
 }

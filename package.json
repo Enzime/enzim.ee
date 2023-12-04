@@ -29,14 +29,16 @@
     "webpack-manifest-plugin": "^3.0.0"
   },
   "scripts": {
-    "dev": "run-p dev:*",
+    "dev": "npm-run-all clean --parallel dev:*",
     "start": "eleventy --serve",
     "build": "run-s clean build:assets build:site",
     "dev:assets": "env NODE_OPTIONS=\"--openssl-legacy-provider\" ELEVENTY_ENV=development webpack --mode production --watch",
     "dev:site": "env ELEVENTY_ENV=development eleventy --serve",
     "build:assets": "env NODE_OPTIONS=\"--openssl-legacy-provider\" webpack --mode production",
     "build:site": "env ELEVENTY_ENV=production eleventy",
-    "clean": "rm -rf ./public"
+    "clean": "rm -rf ./public",
+    "upload": "rsync -avP --delete public/ matrix@styx:/matrix/nginx-proxy/data/matrix-domain/",
+    "deploy": "run-s build upload"
   },
   "dependencies": {
     "remove": "^0.1.5"
