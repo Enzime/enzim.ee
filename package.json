@@ -37,7 +37,7 @@
     "build:assets": "env NODE_OPTIONS=\"--openssl-legacy-provider\" webpack --mode production",
     "build:site": "env ELEVENTY_ENV=production eleventy",
     "clean": "rm -rf ./public",
-    "upload": "rsync -avP --delete public/ matrix@styx:/matrix/nginx-proxy/data/matrix-domain/",
+    "upload": "rsync -avP --delete --exclude=/.well-known public/ matrix@styx:/matrix/static-files/public/",
     "deploy": "run-s build upload"
   },
   "dependencies": {
